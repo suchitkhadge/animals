@@ -8,26 +8,15 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) {
-    List<Wolf> wolves = new ArrayList<>();
-    wolves.add(new Wolf());
-    wolves.add(new Wolf());
-    wolves.add(new Wolf());
+    new Dog();
 
-    wolves.add(new Dog());
-    wolves.add(new Dog());
-    wolves.add(new Dog());
+    /*
+    0. Class initialization of Wolf superclass (object)- not necessary because Object is already loaded
+    1. Class initialization of Wolf
+    2. Class initialization of Dog
+    3. Wolf's initialization of Dog instance
+    4. Dog's initialization of Dog instance
+     */
 
-    Collections.shuffle(wolves);
-
-    for (Wolf w : wolves) {
-      System.out.println();
-      System.out.println(w.getClass().getSimpleName());
-      w.hunt();
-      w.vocalize();
-      if (w instanceof Dog) {
-        ((Dog) w).rollOver();     //Dog d = ((Dog)w)> dog.rollOver()
-
-      }
-    }
 
   }}
